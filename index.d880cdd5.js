@@ -1,0 +1,2 @@
+const e=(e,o)=>new Promise((s=>setTimeout((()=>s(e)),o))),o=[e("First",1e3),e("Second",1300),e("Third",2e3),e("Fourth",3e3),e("Fifth",2500)];Promise.all(o).then((e=>e.forEach(((e,o)=>console.log(`Promise ${o+1}: ${e}`))))).catch(console.log);const s=e=>new Promise((o=>setTimeout((()=>o(e)),4e3*Math.random()+1e3))),t=[s("Value 1"),s("Value 2"),s("Value 3"),s("Value 4"),s("Value 5")];Promise.race(t).then((e=>console.log("The fastest promise:",e))).catch(console.log);
+//# sourceMappingURL=index.d880cdd5.js.map
