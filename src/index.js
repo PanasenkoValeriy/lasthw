@@ -19,10 +19,11 @@ Promise.all(promises)
   .catch(console.log);
 
 //   2
-const randomDelay = value =>
-  new Promise(resolve =>
+const randomDelay = value => {
+  return new Promise(resolve =>
     setTimeout(() => resolve(value), Math.random() * 4000 + 1000)
   );
+};
 
 const promises2 = [
   randomDelay('Value 1'),
